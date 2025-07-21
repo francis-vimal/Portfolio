@@ -1,0 +1,48 @@
+@import  '../../../variables';
+
+li {
+    position: relative;
+    z-index: 1;
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.headerContainer {
+    position: relative;
+    display: flex;
+    gap: 50px;
+    background-color: black;
+    border-radius: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 30px;
+    margin: 30px 80px;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.headerContainer > * {
+    cursor: pointer
+}
+
+.githubImg {
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.animationBlock {
+    width: 100px;
+    height: 80%;
+    position: absolute;
+    left: -70px;
+    background: $primary-color;
+    z-index: 0;
+    border-radius: 50px;
+    transition: all 1s cubic-bezier(0.33, -0.32, 0.5, 1.23);;
+}

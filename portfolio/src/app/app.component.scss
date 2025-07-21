@@ -1,0 +1,87 @@
+@import './../variables';
+
+* {
+    font-family: 'Lufga', sans-serif;
+}
+
+h1 {
+    font-family: "Urbanist", sans-serif;
+}
+
+h1, p {
+    margin: 0;
+}
+
+#hero {
+    width: 100%;
+    height: 611px;
+}
+
+#hero {
+    .header {        
+        position: relative;
+        top: 70px;
+        font-size: 64px;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+    .name {
+        color: $primary-color;
+    }
+
+    .contentContainer {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        bottom: 0;
+    }
+
+    .reviewText {
+        padding: 90px 0 0 50px;
+        flex: 0 1 20%;
+    }
+
+    .profileImgContainer {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 30%;
+    }
+
+    .profileImgContainer::before {
+        content: "";
+        width: 540px;
+        height: 320px;
+        background-color: #fd853a80;
+        position: absolute;
+        bottom: 0;
+        z-index: 0;
+        border-top-left-radius: 400px;
+        border-top-right-radius: 400px;
+    }
+
+    .profileImg {
+        position: relative;
+        z-index: 1;
+        object-fit: contain;
+    }
+
+    .yearsExperience {
+        padding: 90px 50px 0 0;
+        text-align: right;
+        flex: 0 1 20%;
+    }
+
+    .years {
+        font-size: 36px;
+        font-weight: 600;
+    }
+
+    .experience {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
