@@ -1,0 +1,260 @@
+@import '../../../variables';
+
+.header {        
+    position: relative;
+    top: 70px;
+    font-size: 64px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.name {
+    color: $primary-color;
+}
+
+.contentContainer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+}
+
+.reviewText {
+    padding: 90px 0 0 50px;
+    flex: 0 1 20%;
+}
+
+.profileImgContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 30%;
+}
+
+.profileImgContainer::before {
+    content: "";
+    width: 540px;
+    height: 320px;
+    background-color: #fd853a80;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    border-top-left-radius: 400px;
+    border-top-right-radius: 400px;
+}
+
+.profileImg {
+    position: relative;
+    z-index: 1;
+    object-fit: contain;
+}
+
+.yearsExperience {
+    padding: 90px 50px 0 0;
+    text-align: right;
+    flex: 0 1 20%;
+}
+
+.years {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.experience {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.anim-img {
+    position: absolute;
+    bottom: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: all .4s cubic-bezier(0.53,-0.33, 0.32, 1.26);
+}
+
+.anim {
+    &-cloud {
+        transform: translate(-60px, -30px);
+    }
+    
+    &-flower-heart {
+        transform: translate(60px, -30px);
+    }
+ 
+    &-knot-line {
+        transform: translate(-60px, -30px);
+    }
+ 
+    &-left-heart {
+        transform: translate(-30px, -80px);
+    }
+ 
+    &-left-line-heart {
+        transform: translate(-40px, -100px);
+    }
+ 
+    &-multi-hearts {
+        transform: translate(-15px, -300px);
+    }
+ 
+    &-multi-stars {
+        transform: translate(-60px, -30px);
+    }
+ 
+    &-paper-flew {
+        transform: translate(0px, 50px);
+    }
+ 
+    &-rain-cloud {
+        transform: translate(-15px, -230px);
+    }
+ 
+    &-right-big-star {
+        transform: translate(60px, -80px);
+    }
+ 
+    &-right-heart {
+        transform: translate(20px, -30px);
+    }
+ 
+    &-saturn {
+        transform: translate(40px, -80px);
+    }
+ 
+    &-small-swirl1 {
+        transform: translate(-60px, -80px);
+    }
+ 
+    &-small-swirl2 {
+        transform: translate(60px, -80px);
+    }
+ 
+    &-small-swirl3 {
+        transform: translate(60px, -50px);
+    }
+ 
+    &-star1 {
+        transform: translate(-60px, -30px);
+    }
+ 
+    &-star2 {
+        transform: translate(-60px, -150px);
+    }
+ 
+    &-star3 {
+        transform: translate(60px, -80px);
+    }
+ 
+    &-swirl {
+        transform: translate(0px, -230px);
+    }
+ 
+    &-zig-zack-line {
+        transform: translate(-60px, 0px);
+    }
+}
+
+.profileImg:hover~.anim {
+    &-rain-cloud {
+        transform: translate(90px, -320px);
+        opacity: 0.8;
+    }
+    
+    &-multi-hearts {
+        transform: translate(-30px, -440px);
+        opacity: 0.8;
+    }
+
+    &-swirl {
+        transform: translate(-100px, -330px);
+        opacity: 0.8;
+    }
+
+    &-saturn {
+        transform: translate(280px, -150px);
+        opacity: 0.8;
+    }
+
+    &-right-big-star {
+        transform:translate(70px, -230px);
+        opacity: 0.8;
+    }
+
+    &-flower-heart {
+        transform: translate(140px, -60px);
+        opacity: 0.8;
+    }
+
+    &-paper-flew {
+        transform: translate(240px, 30px);
+        opacity: 0.8;
+    }
+
+    &-small-swirl3 {
+        transform: translate(235px, -60px);
+        opacity: 0.8;
+    }
+
+    &-small-swirl2 {
+        transform: translate(155px, -150px);
+        opacity: 0.8;
+    }
+
+    &-star3 {
+        transform: translate(205px, -170px);
+        opacity: 0.8;
+    }
+
+    &-right-heart {
+        transform: translate(140px, -160px);
+        opacity: 0.8;
+    }
+
+    &-zig-zack-line {
+        transform: translate(-180px, 0px);
+        opacity: 0.8;
+    }
+
+    &-knot-line {
+        transform: translate(-280px, 15px) rotate(45deg);
+        opacity: 0.8;
+    }
+
+    &-star1 {
+        transform: translate(-240px, -75px);
+        opacity: 0.8;
+    }
+
+    &-cloud {
+        transform: translate(-300px, -100px);
+        opacity: 0.8;
+    }
+
+    &-multi-stars {
+        transform: translate(-160px, -50px);
+        opacity: 0.8;
+    }
+
+    &-small-swirl1 {
+        transform: translate(-260px, -200px);
+        opacity: 0.8;
+    }
+
+    &-left-line-heart {
+        transform: translate(-100px, -230px);
+        opacity: 0.8;
+    }
+
+    &-star2 {
+        transform: translate(-170px, -300px);
+        opacity: 0.8;
+    }
+
+    &-left-heart {
+        transform: translate(-140px, -160px);
+        opacity: 0.8;
+    }
+}
