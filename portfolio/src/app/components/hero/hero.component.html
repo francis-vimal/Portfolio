@@ -1,12 +1,15 @@
-<h1 class="header">I'm <span class="name">Vimal</span>, <br /> Frontend Developer</h1>
+<div class="headerTextContainer" [class.headerHover]="isImageHovered">
+  <span class="helloText">Hello !</span>
+  <h1 class="header">I'm <span class="name">Vimal</span>, <br /> Frontend Developer</h1>
+</div>
 <div class="contentContainer">
-  <p class="reviewText">Vimal's Exceptional product design ensure our website's success. Highly Recommended.</p>
+  <p class="reviewText" [class.reviewTextHover]="isImageHovered">Vimal's Exceptional product design ensure our website's success. Highly Recommended.</p>
   <div class="profileImgContainer">
-    <img class="profileImg" src="../assets/vimal_photo.webp" width="300" alt="profile_image" />
+    <img class="profileImg" src="../assets/vimal_photo.webp" width="300" alt="profile_image" (mouseenter)="isImageHovered = true" (mouseleave)="isImageHovered = false" />
     <img *ngFor="let img of imgList, let i = index" class="anim-img anim-{{img.name}}" [src]="'../../../assets/' + img.name + '.png'" [width]="img.width" [height]="img.height" alt="" />
   </div>
-  <div class="yearsExperience">
-    <p class="years">2.5 Years</p>
+  <div class="yearsExperience" [class.experienceTextHover]="isImageHovered">
+    <p class="years">2.5 Years</p> 
     <p class="experience">Experience</p>
   </div>
 </div>

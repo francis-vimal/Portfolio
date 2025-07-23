@@ -1,12 +1,55 @@
 @import '../../../variables';
 
+.headerTextContainer {
+    position: relative;
+    transform: translate(0, 0%) scale(1);
+    transition: all .4s cubic-bezier(0.53,-0.33, 0.32, 1.26);
+    text-align: center;
+}
+
+.headerTextContainer .helloText:after {
+    content: "";
+    position: absolute;
+    background-image: url("../../../assets/Vector\ 1.png");
+    width: 25px;
+    height: 25px;
+    transform: translate(20px, -25px);
+    background-position: center;
+    background-size: contain;
+}
+
+.headerTextContainer .header:before {
+    content: "";
+    position: absolute;
+    background-image: url("../../../assets/Vector\ 2.png");
+    width: 50px;
+    height: 50px;
+    transform: translate(-210px, 155px);
+    background-position: center;
+    background-size: contain;
+}
+
+.headerTextContainer img:nth-child(1) {
+    position: absolute;
+    top: 0;
+    right: 100%;
+}
+
+.helloText {
+    color: black;
+    border: 1px solid black;
+    padding: 6px 20px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
 .header {        
     position: relative;
-    top: 70px;
+    opacity: 1;
     font-size: 64px;
     text-align: center;
     font-weight: 600;
-    margin-bottom: 0;
+    margin: 15px 0 0 0;
 }
 
 .name {
@@ -23,6 +66,7 @@
 .reviewText {
     padding: 90px 0 0 50px;
     flex: 0 1 20%;
+    transition: all .4s cubic-bezier(0.53,-0.33, 0.32, 1.26);
 }
 
 .profileImgContainer {
@@ -55,6 +99,7 @@
     padding: 90px 50px 0 0;
     text-align: right;
     flex: 0 1 20%;
+    transition: all .4s cubic-bezier(0.53,-0.33, 0.32, 1.26);
 }
 
 .years {
@@ -157,7 +202,7 @@
     }
 }
 
-.profileImg:hover~.anim {
+.profileImg:hover ~ .anim {
     &-rain-cloud {
         transform: translate(90px, -320px);
         opacity: 0.8;
@@ -257,4 +302,19 @@
         transform: translate(-140px, -160px);
         opacity: 0.8;
     }
+}
+
+.headerHover {
+    transform: translate(0, 200%) scale(0.5);
+    opacity: 0;
+}
+
+.reviewTextHover {
+    transform: translate(0, -50%);
+    padding: 90px 0 0 40px;
+}
+
+.experienceTextHover {
+    transform: translate(0, -50%);
+    padding: 90px 40px 0 0;
 }

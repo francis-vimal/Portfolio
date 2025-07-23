@@ -1,0 +1,35 @@
+@import '../../../variables';
+
+.projectsContainer {
+    width: 100%;
+    height: 500px;
+    background-image: url("../../../assets/projects_background.webp");
+    background-position: center;
+    background-size: cover;
+    border-radius: 60px 60px 0 0
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerContainer h2 {
+    flex: 1 1 60%;
+    color: white;
+    padding: 50px;
+    font-size: 36px;
+    margin: 0;
+}
+
+.headerContainer h2 span {
+    color: $primary-color
+}
+
+.headerContainer p {
+    flex: 1 1 40%;
+    color: white;
+    padding-right: 50px;
+}
