@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
-
+  projects = [
+    "oands_page",
+    "oands_page",
+    "oands_page",
+  ]
 }

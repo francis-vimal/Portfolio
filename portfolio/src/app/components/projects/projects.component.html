@@ -1,7 +1,14 @@
 <div class="projectsContainer">
     <div class="headerContainer">
         <h2>My <span>Projects</span></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendm sodales </p>
     </div>
-    
+    <div class="projectContentContainer">
+        <div class="projectContentSvg" *ngFor="let project of projects">
+            <!-- <img [src]="'../../../assets/' + project + '.jpg'" width="100%" height="90%" /> -->
+             <div class="horizontalRect"></div>
+             <div class="verticalRect"></div>
+             <div class="navArrow"></div>
+        </div>
+    </div>
 </div>
