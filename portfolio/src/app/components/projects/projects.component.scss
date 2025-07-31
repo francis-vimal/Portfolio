@@ -9,6 +9,7 @@
     background-attachment: fixed;
     border-radius: 60px 60px 0 0;
     margin-bottom: 30px;
+    overflow: hidden;
 }
 
 .headerContainer {
@@ -36,52 +37,84 @@
     padding-right: 50px;
 }
 
+.projectDetailsContainer {
+    width: 100%;
+    height: 180px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 30px 30px 0 0;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .projectContentContainer {
+    position: relative;
     display: flex;
     flex-direction: row;
     gap: 30px;
     padding: 0 30px;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 30px;
 }
 
-.projectContentSvg {
-    position: relative;
-    aspect-ratio: 5 / 6;
-    // background-image: url("../../../assets/projects_box.svg");
-    background: linear-gradient(to bottom, green 50% , transparent 50% );
-    border-radius: 30px;
-    // background-position: center;
-    // background-size: contain;
-    // background-repeat: no-repeat;
-    max-width: 500px;
-    height: 400px;
+.projectContentContainer h3 {
+    color: white;
+    padding: 30px 30px;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.projectContentSvg:before {
+.projectDetailsContainer:before {
     content: "";
     position: absolute;
     bottom: 0;
-    right: 0;
-    width: 110px;
-    height: 110px;
-    // background-color: yellow;
+    left: 5%;
+    background: #9E9D9D;
+    width: 90%;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.projectDetailsContainer:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    background: rgba(128, 128, 128, 0.3);
+    width: 80%;
+    height: 60px;
+    border-radius: 20px;
 }
 
 .navArrow {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 100px;
-    height: 100px;
-    background-color: red;
+    width: 90px;
+    height: 90px;
+    background-color: #1D2939;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navArrow .navIcon {
+    font-size: 40px;
+    color: white;
 }
 
 .horizontalRect {
     position: absolute;
     width: 100%;
-    height: 150px;
+    height: 130px;
     background-color: grey;
     bottom: 110px;
     border-radius: 0 0 50px 0;
@@ -90,7 +123,7 @@
 .horizontalRectBorder {
     position: absolute;
     width: 76%;
-    height: 180px;
+    height: 160px;
     background-color: grey;
     z-index: 10;
     bottom: 80px;
@@ -106,15 +139,43 @@
 .verticalRect {
     position: absolute;
     width: calc(100% - 110px);
-    height: 260px;
+    height: 240px;
     background-color: grey;
     right: 110px;
     bottom: 0;
     border-radius: 0 0 50px 0;
+    background-position-y: -250px;
 }
 
 .horizontalRect, .horizontalRectBorder, .verticalRect {
-    background-image: url("../../../assets/oands_page.jpg");
-    background-size: cover;
-    background-position: 0 0;
+    background-size: 500px 250px;
+    background-position: -50px 0;
+    border-radius: 30px;
+    z-index: 2;
+}
+
+.projectContentSvg {
+    position: relative;
+    aspect-ratio: 5 / 6;
+    border-radius: 30px;
+    max-width: 500px;
+    min-width: 330px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.sliderContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.inactive {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
 }
