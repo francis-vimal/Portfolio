@@ -3,23 +3,25 @@
         <h2>My <span>Projects</span></h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendm sodales </p>
     </div>
-    <div class="projectContentContainer">
-        <div class="projectContentSvg" *ngFor="let project of projects">
-            <div class="projectDetailsContainer">
-                <h3>{{project.title}}</h3>
+    <div class="slider">
+        <div class="projectContentContainer">
+            <div class="projectContentSvg" *ngFor="let project of projects">
+                <div class="projectDetailsContainer">
+                    <h3>{{project.title}}</h3>
+                </div>
+                <!-- <img [src]="'../../../assets/' + project + '.jpg'" width="100%" height="90%" /> -->
+                 <div [style.backgroundImage]="'url(' + project.img + ')'" class="horizontalRect"></div>
+                 <div [style.backgroundImage]="'url(' + project.img + ')'" class="horizontalRectBorder"></div>
+                 <div [style.backgroundImage]="'url(' + project.img + ')'" class="verticalRect"></div>
+                 <div class="navArrow">
+                    <span class="material-symbols-outlined navIcon">
+                        arrow_outward
+                    </span>
+                 </div>
             </div>
-            <!-- <img [src]="'../../../assets/' + project + '.jpg'" width="100%" height="90%" /> -->
-             <div [style.backgroundImage]="'url(' + project.img + ')'" class="horizontalRect"></div>
-             <div [style.backgroundImage]="'url(' + project.img + ')'" class="horizontalRectBorder"></div>
-             <div [style.backgroundImage]="'url(' + project.img + ')'" class="verticalRect"></div>
-             <div class="navArrow">
-                <span class="material-symbols-outlined navIcon">
-                    arrow_outward
-                </span>
-             </div>
         </div>
     </div>
     <div class="sliderContainer">
-        <div *ngFor="let slider of projects, let i = index" class="inactive"></div>
+        <div *ngFor="let dots of dotsArray, let i = index" class="inactive" (click)="onDotClick(i)"></div>
     </div>
 </div>

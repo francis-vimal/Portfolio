@@ -47,15 +47,25 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.slider {
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    width: 80%;
+    align-items: center;
+    margin: 0 10%;
+}
+
 .projectContentContainer {
     position: relative;
+    left: 0;
     display: flex;
     flex-direction: row;
-    gap: 30px;
-    padding: 0 30px;
+    gap: 8.5%;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 30px;
+    transition: left .3s ease-in;
 }
 
 .projectContentContainer h3 {
@@ -158,7 +168,7 @@
     position: relative;
     aspect-ratio: 5 / 6;
     border-radius: 30px;
-    max-width: 500px;
+    max-width: 340px;
     min-width: 330px;
     height: 400px;
     overflow: hidden;
