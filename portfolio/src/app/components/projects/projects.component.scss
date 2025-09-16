@@ -20,7 +20,7 @@
 }
 
 .headerContainer h2 {
-    flex: 1 1 60%;
+    flex: 1 1 30%;
     color: white;
     padding: 50px;
     font-size: 36px;
@@ -49,9 +49,9 @@
 
 .slider {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     overflow: hidden;
-    width: 80%;
+    // width: 80%;
     align-items: center;
     margin: 0 10%;
 }
@@ -61,7 +61,6 @@
     left: 0;
     display: flex;
     flex-direction: row;
-    gap: 8.5%;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 30px;
@@ -182,10 +181,57 @@
     align-items: center;
 }
 
-.inactive {
+.dot {
     width: 15px;
     height: 15px;
     background-color: white;
-    border-radius: 50%;
+    border-radius: 15px;
     cursor: pointer;
+    transition: width .3s ease-in;
+}
+
+.projectContentContainer {
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    /* Hide scrollbar across browsers */
+    scrollbar-width: none;   /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  
+    /* default gap; TS will override --card-gap dynamically */
+    --card-gap: 40px;
+}
+
+.projectContentContainer::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+.projectContentSvg {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+
+    /* IMPORTANT: margin-right is the only thing that changes */
+    margin-right: var(--card-gap);
+
+    /* optional — make sliding feel nicer */
+    transition: margin-right 160ms ease;
+    /* optional scroll snap if you want neat snapping */
+    scroll-snap-align: start;
+}
+
+/* remove gap after last child so layout math is simpler */
+.projectContentContainer .projectContentSvg:last-child {
+    margin-right: 0;
+}
+
+/* smooth snapping on the container (optional but useful) */
+.projectContentContainer {
+    scroll-snap-type: x mandatory;
+}
+
+.dot.active {
+    width: 30px;
+    background-color: $primary-color;
 }

@@ -4,7 +4,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendm sodales </p>
     </div>
     <div class="slider">
-        <div class="projectContentContainer">
+        <div class="projectContentContainer" #sliderContainer>
             <div class="projectContentSvg" *ngFor="let project of projects">
                 <div class="projectDetailsContainer">
                     <h3>{{project.title}}</h3>
@@ -22,6 +22,6 @@
         </div>
     </div>
     <div class="sliderContainer">
-        <div *ngFor="let dots of dotsArray, let i = index" class="inactive" (click)="onDotClick(i)"></div>
+        <div *ngFor="let dots of dotsArray, let i = index" [class.active]="i === activeDotIndex" class="dot" (click)="onDotClick(i)"></div>
     </div>
 </div>
