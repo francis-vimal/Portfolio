@@ -8,11 +8,11 @@ import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 export class ProjectsComponent {
   @ViewChild('sliderContainer', { static: true }) sliderContainerRef!: ElementRef<HTMLElement>;
   
-  projects: { img: string, title: string }[] = [
-    { img: "'../../../assets/oands_page.jpg'", title: "O and S animation" },
-    { img: "'../../../assets/simon_game.jpg'", title: "Simon Game" },
-    { img: "'../../../assets/dice_game.jpg'", title: "Dice Game" },
-    { img: "'../../../assets/simon_game.jpg'", title: "Drum Music Kit" },
+  projects: { img: string, title: string, link: string }[] = [
+    { img: "'../../../assets/oands_page.jpg'", title: "O and S animation", link: "https://www.npmjs.com/package/oands-animation" },
+    { img: "'../../../assets/simon_game.jpg'", title: "Simon Game", link: "https://francis-vimal.github.io/Simon-Game/" },
+    { img: "'../../../assets/dice_game.jpg'", title: "Dice Game", link: "https://francis-vimal.github.io/A-Dice-Game/" },
+    { img: "'../../../assets/simon_game.jpg'", title: "Drum Music Kit", link: "" },
   ]
 
   dots: number = 0;
@@ -59,10 +59,6 @@ export class ProjectsComponent {
     imgs.forEach((img: HTMLImageElement) => {
       img.addEventListener('load', this.resizeHandler);
     });
-  }
-
-  ngOnDestroy(): void {
-    window.removeEventListener('resize', this.resizeTimeout);
   }
 
   private updateGap(): void {
@@ -151,5 +147,9 @@ export class ProjectsComponent {
     }
 
     this.activeDotIndex = index;
+  }
+
+  ngOnDestroy(): void {
+    window.removeEventListener('resize', this.resizeTimeout);
   }
 }
