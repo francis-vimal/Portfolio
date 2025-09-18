@@ -1,3 +1,7 @@
-<div id="skillsbackground">
+<h2 id="skillsHeader">Skills</h2>
+<div id="skillsBackground">
+    <div *ngFor="let skill of skills, let i = index" class="skillContainer">
+        <img [src]="skill.img" alt="skill_img" />
+    </div>
 
 </div>
