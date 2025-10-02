@@ -22,8 +22,6 @@ Language: TypeScript, HTML, SCSS
 
 Version Control: Git & GitHub
 
-Deployment: GitHub Pages / (add your hosting service if different)
-
 📂 Project Structure
 ├── src
 │   ├── app
@@ -50,7 +48,7 @@ Angular CLI
 
 Installation
 # Clone the repository
-git clone https://github.com/<your-username>/<your-repo-name>.git
+git clone https://github.com/francis-vimal/Portfolio.git
 
 # Navigate to the project folder
 cd portfolio
