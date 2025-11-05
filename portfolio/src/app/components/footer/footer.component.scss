@@ -1,0 +1,114 @@
+@import "../../../variables";
+
+h5 {
+    margin: 0;
+}
+
+#footerContainer {
+    background-color: #272727;
+    font-size: 16px;
+    padding: 20px 80px;
+}
+
+.footerTopContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0 80px;
+}
+
+.footerTopContainer > h2 {
+    margin: 0;
+    font-size: 3em;
+    color: white;
+}
+
+.footerTopContainer > button {
+    font-size: 1em;
+    background-color: $primary-color;
+    height: 50px;
+    padding: 10px 30px;
+    color: white;
+    border: none;
+    border-radius: 30px;
+}
+
+.footerContentContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    gap: 15px;
+}
+
+.footerMyDetailsContainer {
+    flex: 1 1 40%;
+    color: white;
+}
+
+.footerMyDetailsContainer > p {
+    margin-top: 20px;
+    font-size: 0.875em;
+    line-height: 1.5em;
+    font-weight: 300;
+}
+
+.myDetailsTop {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    .githubImg {
+        background-color: $primary-color;
+        padding: 10px;
+        border-radius: 50%;
+    }
+}
+
+.myDetailsTop > p {
+    font-size: 1.5em;
+}
+
+.footerNavContainer {
+    flex: 1 1 20%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+h5 {
+    width: 100%;
+    color: $primary-color;
+    font-size: .875em;
+    margin-bottom: 25px;
+}
+
+.footerNavContainer > a, .footerContactContainer > p {
+    color: white;
+    font-size: .75em;
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+.footerContactContainer {
+    flex: 1 1 20%;
+}
+
+.footerFormContainer {
+    flex: 1 1 20%;
+}
+
+@media screen and (max-width: 768px) {
+    .footerContentContainer {
+        flex-direction: column;
+    }
+
+    .footerNavContainer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    h5 {
+        margin-bottom: 15px;
+    }
+}

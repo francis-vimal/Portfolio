@@ -13,7 +13,7 @@
     background-image: url("../../../assets/Vector\ 1.png");
     width: 25px;
     height: 25px;
-    transform: translate(100%, -15px);
+    transform: translateY(-15px);
     background-position: center;
     background-size: contain;
 }
@@ -76,5 +76,17 @@
     img {
         transform: scale(1.05);
         transition: transform .3s ease-in-out;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #skillsBackground {
+        padding: 50px 100px 100px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #skillsBackground {
+        padding: 50px 70px 100px;
     }
 }
