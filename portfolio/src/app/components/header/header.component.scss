@@ -46,3 +46,25 @@ a {
     border-radius: 50px;
     transition: all 1s cubic-bezier(0.33, -0.32, 0.5, 1.23);;
 }
+
+@media screen and (max-width: 600px) {
+    .headerContainer {
+        padding: 10px 20px;
+        margin: 30px 30px;
+        gap: 10px;
+    }
+
+    a {
+        font-size: 12px;
+    }
+
+    .githubImg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .animationBlock {
+        width: 60px;
+        height: 50%;
+    }
+}
