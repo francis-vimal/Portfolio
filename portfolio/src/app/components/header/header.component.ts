@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -12,20 +12,37 @@ export class HeaderComponent {
     const target = event.currentTarget as HTMLElement;
     const rect = target.getBoundingClientRect();
     const parentRect = target.parentElement!.getBoundingClientRect();
-    const parentStyle = getComputedStyle(target.parentElement!);
     
-    // Get numeric gap value (e.g. "10px" → 10)
-    const gap = parseFloat(parentStyle.gap) || 0;
     const offset = rect.left - parentRect.left + rect.width / 2;
-    console.log("target:", rect.left, "react", rect.left, "parentRect", parentRect.left, "gap", rect.width / 2);
-    console.log("offset: ", offset);
-    this.animationBlock.nativeElement.style.left = `${offset - gap}px`; // 50 = half of animationBlock width
-    console.log("left: ", offset - gap);
-    this.animationBlock.nativeElement.style.transition = `all 0.5s cubic-bezier(0.33, -0.32, 0.5, 1.23)`;
+    
+    // 👇 dynamically get the block width instead of assuming
+    const blockWidth = this.animationBlock.nativeElement.offsetWidth;
+    
+    // ✅ Center the animationBlock properly
+    this.animationBlock.nativeElement.style.left = `${offset - blockWidth / 2}px`;
+    this.animationBlock.nativeElement.style.transition =
+      `all 0.5s cubic-bezier(0.33, -0.32, 0.5, 1.23)`;
+    
   }
 
-  removeIndicator() {
-    this.animationBlock.nativeElement.style.left = `-70px`;
+  removeIndicator(left:string = "-70px") {
+    this.animationBlock.nativeElement.style.left = left
     this.animationBlock.nativeElement.style.transition = `all 1s cubic-bezier(0.33, -0.32, 0.5, 1.23)`;
+  }
+
+  @HostListener('window:resize', ['$event']) 
+  onResize(event: Event) {
+    const screenWidth = window.innerWidth;
+  
+    if (screenWidth <= 600) {
+      this.removeIndicator("-50px");
+      // 👇 Do something when screen width is 600px or less
+      console.log('Mobile view active');
+      // e.g. this.isMobile = true;
+    } else {
+      // 👇 For larger screens
+      console.log('Desktop view active');
+      // e.g. this.isMobile = false;
+    }
   }
 }
