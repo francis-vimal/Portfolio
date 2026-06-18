@@ -1,0 +1,63 @@
+.headerTextContainer {
+    position: relative;
+    transform: translate(0,0%) scale(1);
+    transition: all .4s cubic-bezier(0.53,-0.33,0.32,1.26);
+    text-align:center;
+}
+
+
+.headerTextContainer .helloText:after {
+    content:"";
+    position:absolute;
+    background-image:url("../../../../assets/Vector 1.png");
+    width:25px;
+    height:25px;
+    transform:translate(20px,-25px);
+    background-position:center;
+    background-size:contain;
+}
+
+
+.header {
+    position:relative;
+    font-size:64px;
+    text-align:center;
+    font-weight:600;
+}
+
+
+.name {
+    color:$primary-color;
+}
+
+
+.contentContainer {
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+}
+
+
+.profileImgContainer {
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.profileImgContainer::before {
+    content:"";
+    width:540px;
+    height:320px;
+    background:#fd853a80;
+    position:absolute;
+    bottom:0;
+    border-radius:400px 400px 0 0;
+}
+
+
+.profileImg {
+    position:relative;
+    z-index:1;
+}

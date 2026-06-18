@@ -1,5 +1,9 @@
 @import '../../../variables';
 
+@import './styles/layout';
+@import './styles/animation';
+@import './styles/hover';
+@import './styles/responsive';
 .headerTextContainer {
     position: relative;
     transform: translate(0, 0%) scale(1);

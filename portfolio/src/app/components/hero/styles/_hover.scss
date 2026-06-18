@@ -1,0 +1,44 @@
+.profileImg:hover ~ .anim {
+
+    &-rain-cloud {
+        transform:translate(90px,-320px);
+    }
+
+    &-multi-hearts {
+        transform:translate(-30px,-440px);
+    }
+
+    &-saturn {
+        transform:translate(280px,-150px);
+    }
+
+    &-flower-heart {
+        transform:translate(140px,-60px);
+    }
+
+    &-paper-flew {
+        transform:translate(240px,30px);
+    }
+
+
+    &-cloud {
+        transform:translate(-300px,-100px);
+    }
+
+
+    &-star1 {
+        transform:translate(-240px,-75px);
+    }
+
+
+    *[class^="anim-"] {
+        opacity:.8;
+    }
+
+}
+
+
+.headerHover {
+    transform:translate(0,200%) scale(.5);
+    opacity:0;
+}

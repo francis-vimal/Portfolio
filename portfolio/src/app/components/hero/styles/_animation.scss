@@ -1,0 +1,48 @@
+.anim-img {
+    position:absolute;
+    bottom:0;
+    object-fit:contain;
+    opacity:0;
+    transition:all .4s cubic-bezier(0.53,-0.33,0.32,1.26);
+}
+
+
+.anim {
+
+    &-cloud {
+        transform:translate(-60px,-30px);
+    }
+
+    &-flower-heart {
+        transform:translate(60px,-30px);
+    }
+
+    &-knot-line {
+        transform:translate(-60px,-30px);
+    }
+
+    &-left-heart {
+        transform:translate(-30px,-80px);
+    }
+
+    &-multi-hearts {
+        transform:translate(-15px,-300px);
+    }
+
+    &-rain-cloud {
+        transform:translate(-15px,-230px);
+    }
+
+    &-saturn {
+        transform:translate(40px,-80px);
+    }
+
+    &-swirl {
+        transform:translate(0,-230px);
+    }
+
+    &-zig-zack-line {
+        transform:translate(-60px,0);
+    }
+
+}
